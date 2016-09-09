@@ -22,14 +22,11 @@ module.exports = (app) => {
 
 	app.get('/delete/*', (req, res) => {
 		delete zipCodes[req.params[0]];
+		res.send(`${req.params[0]} has been removed.`)
 	});
 
 	app.get('/has/*', (req, res) => {
-		if(zipCodes[req.params[0]]) {
-			res.send(true);
-		} else {
-			res.send(false);
-		}
+		res.send(!!zipCodes[req.params[0]]);
 	});
 
 	app.get('/display', (req, res) => {
