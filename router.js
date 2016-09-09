@@ -5,7 +5,7 @@ module.exports = (app) => {
 
 	app.get('/', (req, res) => {
 		res.send(
-			`Welcome to my ZIP code API, built with NodeJS. All commands are done via endpoints (/insert/#, delete/#, has/#, /display)`
+			`Welcome to my ZIP code API, built with NodeJS. All commands are done via endpoints (/insert/#, /delete/#, /has/#, /display)`
 			);
 	});
 
