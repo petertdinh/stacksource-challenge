@@ -55,10 +55,10 @@ module.exports = (app) => {
 		for(let i = 0; i < display.length; i++) {
 			if(display[i+1] === '-') {
 				//checking to see if a comma needs to be placed
-				i + 2 !== display.length - 1 ? displayString += ` ${display[i]}-${display[i+2]},` : displayString += `${display[i]}-${display[i+2]}`
+				i + 2 !== display.length - 1 ? displayString += ` ${display[i]}-${display[i+2]}, ` : displayString += `${display[i]}-${display[i+2]}`
 				i += 2;
 			} else {
-				i !== display.length - 1 ? displayString += ` ${display[i]},` : displayString += ` ${display[i]}`
+				i !== display.length - 1 ? displayString += ` ${display[i]}, ` : displayString += ` ${display[i]}`
 			}
 		}
 		res.send(displayString);
