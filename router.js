@@ -39,7 +39,7 @@ module.exports = (app) => {
 				if(zips[i] === zips[i+1] - 1 && zips[i] === zips[i+2] - 2) {
 					display.push(String(zips[i]));
 					display.push('-');
-					for(let j = i + 1; j < zips.length; j++) {
+					for(let j = i + 1; j <= zips.length; j++) {
 						if(zips[j] !== zips[j-1] + 1) {
 							display.push(String(zips[j-1]));
 							i = j - 1;
